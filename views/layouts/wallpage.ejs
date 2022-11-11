@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wall</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/css-reset-and-normalize/css/reset-and-normalize.min.css">
+    <link rel="stylesheet" href="/assets/css/wallpage.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div>
+        <p> The Wall -  Welcome <%= first_name %> <a href="/logout">Logout</a></p></div>
+        <form id="message_form" action="/api/messages/post_message" method="post">
+            <textarea name="content"></textarea>
+            <input type="submit" value="Post a Message">
+        </form>
+        <div>
+            <header id="message_header">Messages: </header>
+            <%- include("../partials/display_messages_comments", { moment, dateTimeFormat, messages, comments }) %>
+        </div>
+    </div>
+</body>
+<script src="/assets/javascript/wallpage.js"></script>
+</html>

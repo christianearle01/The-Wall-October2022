@@ -1,0 +1,48 @@
+body > div {
+    margin-left: 20px;
+}
+
+body > div > p:nth-child(1) {
+    width: 50%;
+    display: block;
+    font-size: x-large;
+    margin: auto;
+    padding-top: 23px;
+}
+
+body > div > p {
+    width: 50%;
+}
+
+body > div > p > a{
+    margin-left: 25px;
+}
+
+#message_form, div > div {
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+body div *, form > * {
+    display: block;
+    margin: 3px 3px;
+    border-radius: 13px;
+    padding: 5px;
+}
+
+.comment_form {
+    margin-left: 70px;
+}
+
+.message_delete, .comment_delete {
+    text-decoration: none;
+    color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: 10%;
+}
+
+.comment_delete {
+    color: blue;
+}
